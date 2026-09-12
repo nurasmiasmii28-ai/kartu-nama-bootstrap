@@ -1,122 +1,471 @@
 <!DOCTYPE html>
-
 <html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-```
-<title>Kartu Nama Digital</title>
-<!-- Bootstrap 5 -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-```
+
+    <title>Kartu Nama Digital</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <style>
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #dff6ff, #bde7ff, #eaf9ff);
+            font-family: Arial, sans-serif;
+        }
+        .hero {
+            padding: 60px 0 40px;
+        }
+        .hero-icon {
+            font-size: 55px;
+        }
+        .profile-card {
+            border: none;
+            border-radius: 25px;
+            overflow: hidden;
+            transition: 0.4s;
+            background: rgba(255, 255, 255, 0.95);
+        }
+        .profile-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 123, 255, 0.25) !important;
+        }
+        .card-top {
+            height: 100px;
+            background: linear-gradient(135deg, #0d6efd, #55c8ff);
+        }
+        .profile-photo {
+            width: 165px;
+            height: 165px;
+            object-fit: cover;
+            border: 7px solid white;
+            margin-top: -75px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+        }
+        .book-icon {
+            font-size: 50px;
+            margin-top: -5px;
+        }
+        .badge-profile {
+            background-color: #e3f4ff;
+            color: #0d6efd;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        .btn-profile {
+            border-radius: 30px;
+            padding: 10px 20px;
+        }
+        .modal-content {
+            border-radius: 25px;
+            overflow: hidden;
+        }
+        .modal-header {
+            background: linear-gradient(135deg, #0d6efd, #55c8ff);
+        }
+        .contact-box {
+            background-color: #eef9ff;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        footer {
+            margin-top: 40px;
+        }
+    </style>
 </head>
-<body class="bg-info-subtle">
-```
-<!-- ================= HEADER ================= -->
+<body>
 
-<div class="container py-5">
+    <!-- ================= HEADER ================= -->
 
-    <div class="text-center mb-5">
-        <h1 class="display-4 fw-bold text-primary">
-            ✨ Kartu Nama Digital
-        </h1>
+    <header class="hero text-center">
+        <div class="container">
 
-        <p class="lead text-primary-emphasis">
-            Selamat datang di profil digital saya
-        </p>
+            <div class="hero-icon mb-2">
+            </div>
+
+            <h1 class="fw-bold text-primary">
+                ✨ Kartu Nama Digital
+            </h1>
+
+            <p class="lead text-secondary">
+                Selamat Datang di Profil Digital Saya
+            </p>
+
+            <div class="mx-auto"
+                style="width: 80px; height: 4px;
+                        background: #0d6efd;
+                        border-radius: 10px;">
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= PROFIL ================= -->
+
+    <main class="container pb-5">
+
+        <div class="row g-5 justify-content-center">
+
+            <!-- ================= KARTU 1 ================= -->
+
+            <div class="col-12 col-md-6 col-lg-5">
+
+                <div class="card profile-card shadow-lg h-100">
+
+                    <!-- BAGIAN ATAS -->
+                    <div class="card-top"></div>
+                    <div class="card-body text-center px-4 pb-4">
+
+                        <!-- FOTO -->
+                        <img src="foto.jpg.JPG.jpeg"
+                            alt="Foto Nur Asmi"
+                            class="rounded-circle profile-photo">
+
+                        <!-- ICON BUKU -->
+                        <div class="book-icon">
+                            📖
+                        </div>
+
+                        <h3 class="fw-bold text-primary mb-1">
+                            Nur Asmi
+                        </h3>
+
+                        <span class="badge-profile">
+                            🎓 Mahasiswa Teknik Komputer
+                        </span>
+
+                        <p class="text-secondary mt-3">
+                            Suka mempelajari teknologi,
+                            pemrograman dan pengembangan website.
+                        </p>
+
+                        <hr>
+
+                        <!-- TOMBOL -->
+                        <button class="btn btn-primary btn-profile me-2"
+                                data-bs-toggle="modal"
+                                data-bs-target="#profilAsmi">
+
+                            👤 Lihat Profil
+
+                        </button>
+
+                        <button class="btn btn-outline-primary btn-profile"
+                                data-bs-toggle="modal"
+                                data-bs-target="#hubungiAsmi">
+
+                            📞 Hubungi
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= KARTU 2 ================= -->
+
+            <div class="col-12 col-md-6 col-lg-5">
+                <div class="card profile-card shadow-lg h-100">
+
+                    <!-- BAGIAN ATAS -->
+                    <div class="card-top"></div>
+
+                    <div class="card-body text-center px-4 pb-4">
+
+                        <!-- FOTO -->
+                        <img src="foto1.jpeg"
+                            alt="Foto Profil Kedua"
+                            class="rounded-circle profile-photo">
+
+                        <!-- ICON BUKU -->
+                        <div class="book-icon">
+                            📚
+                        </div>
+
+                        <h3 class="fw-bold text-primary mb-1">
+                            Nirqan
+                        </h3>
+
+                        <span class="badge-profile">
+                            🎓 Mahasiswa Teknik Komputer
+                        </span>
+
+                        <p class="text-secondary mt-3">
+                            Tertarik pada teknologi,
+                            pemrograman dan dunia digital.
+                        </p>
+
+                        <hr>
+
+                        <!-- TOMBOL -->
+                        <button class="btn btn-primary btn-profile me-2"
+                                data-bs-toggle="modal"
+                                data-bs-target="#profilAndi">
+
+                            👤 Lihat Profil
+
+                        </button>
+
+                        <button class="btn btn-outline-primary btn-profile"
+                                data-bs-toggle="modal"
+                                data-bs-target="#hubungiAndi">
+
+                            📞 Hubungi
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ================================================= -->
+    <!-- MODAL PROFIL NUR ASMI -->
+    <!-- ================================================= -->
+
+    <div class="modal fade"
+        id="profilAsmi"
+        tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content shadow-lg">
+
+                <div class="modal-header text-white">
+
+                    <h5 class="modal-title fw-bold">
+                        👩‍💻 Tentang Saya
+                    </h5>
+
+                    <button type="button"
+                            class="btn-close btn-close-white"
+                            data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body text-center p-4">
+
+                    <img src="foto.jpg.JPG.jpeg"
+                        alt="Foto Nur Asmi"
+                        class="rounded-circle profile-photo mb-3"
+                        style="margin-top: 0;">
+
+                    <h3 class="fw-bold text-primary">
+                        Nur Asmi
+                    </h3>
+
+                    <span class="badge-profile">
+                        🎓 Mahasiswa Teknik Komputer
+                    </span>
+
+                    <hr>
+
+                    <p class="text-secondary">
+                        Saya adalah mahasiswa Teknik Komputer
+                        yang memiliki ketertarikan pada teknologi,
+                        pemrograman, dan pengembangan website.
+                    </p>
+
+                    <div class="text-start">
+
+                        <p>
+                            📚 <strong>Bidang:</strong>
+                            Teknologi Informasi
+                        </p>
+
+                        <p>
+                            💻 <strong>Keahlian:</strong>
+                            HTML, CSS, Bootstrap
+                        </p>
+
+                        <p>
+                            🎯 <strong>Tujuan:</strong>
+                            Terus belajar dan mengembangkan
+                            kemampuan di bidang teknologi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- ================= CARD ================= -->
+    <!-- ================================================= -->
+    <!-- MODAL PROFIL ANDI -->
+    <!-- ================================================= -->
 
-    <div class="row g-4 justify-content-center">
+    <div class="modal fade"
+        id="profilAndi"
+        tabindex="-1">
 
-        <!-- CARD PROFIL -->
+        <div class="modal-dialog modal-dialog-centered">
 
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 border-0 shadow-lg text-center bg-white">
-                <div class="card-body p-5">
+            <div class="modal-content shadow-lg">
 
-                    <div class="display-1 mb-3">
-                        👩‍💻
-                    </div>
+                <div class="modal-header text-white">
+
+                    <h5 class="modal-title fw-bold">
+                        👨‍💻 Tentang Saya
+                    </h5>
+
+                    <button type="button"
+                            class="btn-close btn-close-white"
+                            data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body text-center p-4">
+
+                    <img src="foto1.jpeg"
+                        alt="Foto Andi"
+                        class="rounded-circle profile-photo mb-3"
+                        style="margin-top: 0;">
 
                     <h3 class="fw-bold text-primary">
-                        Nama Saya
+                        Nirqan
                     </h3>
 
+                    <span class="badge-profile">
+                        🎓 Mahasiswa Teknik Komputer
+                    </span>
+
+                    <hr>
+
                     <p class="text-secondary">
+                        Saya adalah mahasiswa yang memiliki
+                        minat dalam teknologi, pemrograman,
+                        dan pengembangan aplikasi digital.
+                    </p>
+
+                    <div class="text-start">
+
+                        <p>
+                            📚 <strong>Bidang:</strong>
+                            Teknologi Informasi
+                        </p>
+
+                        <p>
+                            💻 <strong>Keahlian:</strong>
+                            Pemrograman
+                        </p>
+
+                        <p>
+                            🎯 <strong>Tujuan:</strong>
+                            Mengembangkan kemampuan
+                            di bidang teknologi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================= -->
+    <!-- MODAL HUBUNGI ASMI -->
+    <!-- ================================================= -->
+
+    <div class="modal fade"
+        id="hubungiAsmi"
+        tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content shadow-lg">
+
+                <div class="modal-header text-white">
+
+                    <h5 class="modal-title fw-bold">
+                        📞 Hubungi Nur Asmi
+                    </h5>
+
+                    <button type="button"
+                            class="btn-close btn-close-white"
+                            data-bs-dismiss="modal">
+                    </button>
+                </div>
+
+                <div class="modal-body p-4">
+
+                    <h4 class="text-primary fw-bold text-center mb-4">
                         Nur Asmi
-                    </p>
+                    </h4>
 
-                    <button type="button"
-                            class="btn btn-primary btn-lg px-4"
-                            data-bs-toggle="modal"
-                            data-bs-target="#profilModal">
+                    <div class="contact-box">
+                        📧 <strong>Email</strong><br>
+                        asmi@email.com
+                    </div>
 
-                        Lihat Profil
+                    <div class="contact-box">
+                        📱 <strong>Telepon</strong><br>
+                        085166047939
+                    </div>
 
-                    </button>
+                    <div class="text-center mt-3">
+
+                        <a href="mailto:asmi@email.com"
+                        class="btn btn-primary btn-profile">
+
+                            ✉️ Kirim Email
+
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- CARD TENTANG SAYA -->
+    <!-- ================================================= -->
+    <!-- MODAL HUBUNGI ANDI -->
+    <!-- ================================================= -->
 
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 border-0 shadow-lg text-center bg-white">
+    <div class="modal fade"
+        id="hubungiAndi"
+        tabindex="-1">
 
-                <div class="card-body p-5">
-                    <div class="display-1 mb-3">
-                        📚
-                    </div>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content shadow-lg">
+                <div class="modal-header text-white">
 
-                    <h3 class="fw-bold text-info">
-                        Tentang Saya
-                    </h3>
-
-                    <p class="text-secondary">
-                        Mahasiswa Teknik Komputer
-                    </p>
+                    <h5 class="modal-title fw-bold">
+                        📞 Hubungi Nirqan
+                    </h5>
 
                     <button type="button"
-                            class="btn btn-info text-white btn-lg px-4"
-                            data-bs-toggle="modal"
-                            data-bs-target="#tentangModal">
-
-                        Tentang Saya
-
+                            class="btn-close btn-close-white"
+                            data-bs-dismiss="modal">
                     </button>
                 </div>
-            </div>
-        </div>
 
-        <!-- CARD KONTAK -->
+                <div class="modal-body p-4">
 
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 border-0 shadow-lg text-center bg-white">
-                <div class="card-body p-5">
+                    <h4 class="text-primary fw-bold text-center mb-4">
+                        Nirqan
+                    </h4>
 
-                    <div class="display-1 mb-3">
-                        📱
+                    <div class="contact-box">
+                        📧 <strong>Email</strong><br>
+                        nir@email.com
                     </div>
 
-                    <h3 class="fw-bold text-primary">
-                        Kontak
-                    </h3>
+                    <div class="contact-box">
+                        📱 <strong>Telepon</strong><br>
+                        082350630558
+                    </div>
 
-                    <p class="text-secondary">
-                        Hubungi saya melalui kontak
-                    </p>
+                    <div class="text-center mt-3">
+                        <a href="mailto:andi@email.com"
+                        class="btn btn-primary btn-profile">
 
-                    <button type="button"
-                            class="btn btn-primary btn-lg px-4"
-                            data-bs-toggle="modal"
-                            data-bs-target="#kontakModal">
+                            ✉️ Kirim Email
 
-                        Hubungi Saya
-
-                    </button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -124,238 +473,21 @@
 
     <!-- ================= FOOTER ================= -->
 
-    <div class="text-center text-primary-emphasis mt-5">
-        <p>
-            💻 Dibuat menggunakan Bootstrap 5
+    <footer class="text-center py-4">
+
+        <p class="fw-bold text-primary mb-1">
+            📚 Kartu Nama Digital
         </p>
 
-        <p class="small">
-            © 2026 Kartu Nama Digital
+        <p class="text-secondary mb-0">
+            Dibuat menggunakan Bootstrap 5 • © 2026
         </p>
+    </footer>
 
-    </div>
+    <!-- BOOTSTRAP JS -->
 
-</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
 
-<!-- ================================================= -->
-<!--                    MODAL PROFIL                  -->
-<!-- ================================================= -->
-
-<div class="modal fade"
-    id="profilModal"
-    tabindex="-1"
-    aria-hidden="true">
-
-    <div class="modal-dialog modal-dialog-centered">
-
-        <div class="modal-content border-0 shadow-lg">
-
-            <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title fw-bold">
-                    👩‍💻 Profil Saya
-                </h5>
-
-                <button type="button"
-                        class="btn-close btn-close-white"
-                        data-bs-dismiss="modal">
-                </button>
-            </div>
-
-            <div class="modal-body text-center p-4">
-
-                <div class="display-1 mb-3">
-                    👩‍💻
-                </div>
-
-                <h3 class="fw-bold text-primary">
-                    Nur Asmi
-                </h3>
-
-                <p class="text-secondary">
-                    Mahasiswa
-                </p>
-
-                <hr>
-
-                <p>
-                    <strong>Nama:</strong>
-                    Nur Asmi
-                </p>
-
-                <p>
-                    <strong>Status:</strong>
-                    Mahasiswa
-                </p>
-
-                <p>
-                    <strong>Bidang:</strong>
-                    Teknik Komputer
-                </p>
-
-            </div>
-            <div class="modal-footer">
-
-                <button type="button"
-                        class="btn btn-primary"
-                        data-bs-dismiss="modal">
-
-                    Tutup
-
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ================================================= -->
-<!--                MODAL TENTANG SAYA               -->
-<!-- ================================================= -->
-
-<div class="modal fade"
-    id="tentangModal"
-    tabindex="-1"
-    aria-hidden="true">
-
-    <div class="modal-dialog modal-dialog-centered">
-
-        <div class="modal-content border-0 shadow-lg">
-
-            <div class="modal-header bg-info text-white">
-                <h5 class="modal-title fw-bold">
-                    📚 Tentang Saya
-                </h5>
-
-                <button type="button"
-                        class="btn-close btn-close-white"
-                        data-bs-dismiss="modal">
-                </button>
-
-            </div>
-
-            <div class="modal-body p-4">
-
-                <div class="text-center mb-3">
-                    <div class="display-1">
-                        📚
-                    </div>
-
-                </div>
-                <h4 class="text-center fw-bold text-info">
-                    Tentang Saya
-                </h4>
-
-                <hr>
-
-                <p>
-                    Saya adalah seorang mahasiswa yang memiliki
-                    ketertarikan pada bidang teknologi informasi
-                    dan pengembangan website.
-                </p>
-
-                <p>
-                    Saya sedang mempelajari berbagai teknologi
-                    seperti HTML, CSS, Bootstrap, Java, dan C++.
-                </p>
-
-                <div class="alert alert-info text-center">
-
-                    💡
-                    <strong>Hobi:</strong>
-                    Belajar teknologi dan membuat website.
-
-                </div>
-            </div>
-
-            <div class="modal-footer">
-
-                <button type="button"
-                        class="btn btn-info text-white"
-                        data-bs-dismiss="modal">
-
-                    Tutup
-
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ================================================= -->
-<!--                  MODAL KONTAK                    -->
-<!-- ================================================= -->
-
-<div class="modal fade"
-    id="kontakModal"
-    tabindex="-1"
-    aria-hidden="true">
-
-    <div class="modal-dialog modal-dialog-centered">
-
-        <div class="modal-content border-0 shadow-lg">
-
-            <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title fw-bold">
-                    📱 Hubungi Saya
-                </h5>
-
-                <button type="button"
-                        class="btn-close btn-close-white"
-                        data-bs-dismiss="modal">
-                </button>
-            </div>
-
-            <div class="modal-body text-center p-4">
-
-                <div class="display-1 mb-3">
-                    📱
-                </div>
-
-                <h4 class="fw-bold text-primary">
-                    Informasi Kontak
-                </h4>
-
-                <hr>
-
-                <p>
-                    📧 <strong>Email</strong>
-                </p>
-
-                <p class="text-secondary">
-                    nurasmi@email.com
-                </p>
-
-                <p>
-                    📞 <strong>Telepon</strong>
-                </p>
-
-                <p class="text-secondary">
-                    082350630558
-                </p>
-
-                <a href="mailto:asmi@email.com"
-                class="btn btn-primary">
-
-                    ✉️ Kirim Email
-
-                </a>
-            </div>
-
-            <div class="modal-footer">
-                <button type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal">
-
-                    Tutup
-
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ================= BOOTSTRAP JAVASCRIPT ================= -->
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-```
 </body>
 </html>
